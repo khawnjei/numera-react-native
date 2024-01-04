@@ -25,7 +25,7 @@ const SignIn = ({navigation}) => {
   });
 
   return (
-    <>
+    <View style={styles.outerContainer}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <View style={styles.iconsContainer}>
         <TouchableOpacity
@@ -56,7 +56,6 @@ const SignIn = ({navigation}) => {
           }) => (
             <>
               <Text style={styles.textSignin}>SIGN IN</Text>
-
               <Input
                 value={values.email}
                 icon={appIcons.emailIcon}
@@ -120,7 +119,9 @@ const SignIn = ({navigation}) => {
               <TouchableOpacity
                 style={styles.btn}
                 disabled={!isValid}
-                onPress={handleSubmit}>
+                onPress={handleSubmit}
+                // onPressIn={()=>navigation.push("Dashboard")}
+              >
                 <Text style={styles.btnText}>LOGIN</Text>
               </TouchableOpacity>
               <View style={styles.signupContainer}>
@@ -155,7 +156,7 @@ const SignIn = ({navigation}) => {
           )}
         </Formik>
       </View>
-    </>
+    </View>
   );
 };
 

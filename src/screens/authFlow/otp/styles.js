@@ -4,6 +4,11 @@ import {fontFamily} from '../../../services/utilities/fonts';
 const {StyleSheet} = require('react-native');
 
 export const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
+  },
   topContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -35,9 +40,9 @@ export const styles = StyleSheet.create({
     lineHeight: 3,
     paddingBottom: 0,
     borderRadius: 10,
-    borderColor: colors.grey,
+    borderColor: '#C7C7C7',
     color: colors.grey,
-    backgroundColor: colors.greyLight,
+    backgroundColor: '#F5F5F5',
   },
   otpTitleContainer: {
     alignItems: 'center',

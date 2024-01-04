@@ -11,7 +11,7 @@ const Otp = ({navigation}) => {
   const isValid = !otp || otp.length < 4;
 
   return (
-    <View>
+    <View style={styles.outerContainer}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <View style={styles.topContainer}>
         <TouchableOpacity

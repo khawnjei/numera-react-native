@@ -3,6 +3,11 @@ import {colors} from '../../../services/utilities/colors';
 import {fontFamily} from '../../../services/utilities/fonts';
 
 export const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
+  },
   container: {
     marginTop: 20,
   },
@@ -38,12 +43,10 @@ export const styles = StyleSheet.create({
   indicator: {
     height: 2.5,
     width: 10,
-    // flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: colors.theme,
     borderRadius: 2,
-    // marginHorizontal: 170,
     marginTop: 20,
   },
   btn: {

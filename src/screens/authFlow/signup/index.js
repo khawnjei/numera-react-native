@@ -23,13 +23,14 @@ const SignUp = ({navigation}) => {
       .oneOf([Yup.ref('password'), null], 'Passwords must match')
       .required('Confirm Password is required'),
   });
+
   const [isPasswordVisible, setIsPasswordVisible] = useState(true);
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(prev => !prev);
   };
 
   return (
-    <>
+    <View style={styles.outerContainer}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <View style={styles.iconsContainer}>
         <TouchableOpacity
@@ -211,7 +212,7 @@ const SignUp = ({navigation}) => {
           )}
         </Formik>
       </View>
-    </>
+    </View>
   );
 };
 

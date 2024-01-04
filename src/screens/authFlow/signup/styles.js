@@ -4,6 +4,11 @@ import {fontFamily} from '../../../services/utilities/fonts';
 const {StyleSheet} = require('react-native');
 
 export const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
+  },
   iconsContainer: {
     flexDirection: 'row',
     marginTop: 15,

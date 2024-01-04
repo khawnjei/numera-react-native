@@ -23,7 +23,7 @@ const CreatePassword = ({navigation}) => {
       .required('Confirm Password is required'),
   });
   return (
-    <View style={styles.mainContainer}>
+    <View style={styles.outerContainer}>
       <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
       <View style={styles.topContainer}>
         <TouchableOpacity

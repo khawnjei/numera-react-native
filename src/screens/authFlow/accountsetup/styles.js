@@ -4,6 +4,11 @@ import {fontFamily} from '../../../services/utilities/fonts';
 const {StyleSheet} = require('react-native');
 
 export const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
+  },
   topContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -12,7 +17,8 @@ export const styles = StyleSheet.create({
   },
   inputField: {
     borderRadius: 4,
-    backgroundColor: colors.greyLight,
+    backgroundColor: '#F5F5F5',
+    borderColor: '#C7C7C7',
     borderWidth: 1,
     marginHorizontal: 20,
     flexDirection: 'row',
@@ -31,6 +37,7 @@ export const styles = StyleSheet.create({
     width: '83%',
     height: '100%',
     fontFamily: fontFamily.appTextLight,
+    marginTop: 5,
   },
   eyeIcon: {
     width: 20,
@@ -94,7 +101,8 @@ export const styles = StyleSheet.create({
     top: 190,
   },
   dropdownTextContainer: {
-    backgroundColor: colors.greyLight,
+    backgroundColor: '#F5F5F5',
+    borderColor: '#C7C7C7',
     width: 80,
     height: 80,
     borderRadius: 5,

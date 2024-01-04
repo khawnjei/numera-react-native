@@ -10,8 +10,7 @@ import {
 import React, {useState} from 'react';
 import {styles} from './styles';
 import {colors} from '../../../services/utilities/colors';
-// import Swiper from 'react-native-swiper';
-// import {appImages} from '../../../services/utilities/assets';
+import {appImages} from '../../../services/utilities/assets';
 
 const Data = [
   {
@@ -60,25 +59,26 @@ const BoardingA = ({navigation}) => {
   const {width} = useWindowDimensions();
 
   return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
-      <FlatList
-        data={Data}
-        pagingEnabled
-        bounces={false}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        renderItem={({item}) => (
-          <Item
-            {...item}
-            title={item.title}
-            body={item.bodyText}
-            image={item.image}
-          />
-        )}
-        keyExtractor={item => item.id}
-      />
-      {/* <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+    <View style={styles.outerContainer}>
+      <View style={styles.container}>
+        <StatusBar backgroundColor={colors.white} barStyle={'dark-content'} />
+        <FlatList
+          data={Data}
+          pagingEnabled
+          bounces={false}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          renderItem={({item}) => (
+            <Item
+              {...item}
+              title={item.title}
+              body={item.bodyText}
+              image={item.image}
+            />
+          )}
+          keyExtractor={item => item.id}
+        />
+        {/* <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         {Data.map((_, index) => (
           <View
             key={index}
@@ -91,39 +91,15 @@ const BoardingA = ({navigation}) => {
           />
         ))}
       </View> */}
-      {/* <Swiper
-        style={{flex: 1}}
-        showsPagination={true}
-        showsButtons={false}
-        loop={false}>
-        <View style={{flexDirection: 'column'}}>
-          <View style={styles.imageContent}>
-            <Image style={[styles.imageMain]} source={appImages.boardingB} />
-          </View>
-          <View style={styles.textContainer}>
-            <Text style={styles.titleText}>pablo</Text>
-            <Text style={[styles.bodyText]}>isaaaaaa</Text>
-          </View>
+
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => navigation.push('Signin')}>
+          <Text style={styles.btnText}>GET STARTED</Text>
+        </TouchableOpacity>
+        <View style={styles.bottomText}>
+          <Text style={styles.bottomBody}>Copyrighted © Numera</Text>
         </View>
-      </Swiper> */}
-      {/* <Swiper style={styles.wrapper} showsButtons={true}>
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
-        </View>
-      </Swiper> */}
-      <TouchableOpacity
-        style={styles.btn}
-        onPress={() => navigation.push('Signin')}>
-        <Text style={styles.btnText}>GET STARTED</Text>
-      </TouchableOpacity>
-      <View style={styles.bottomText}>
-        <Text style={styles.bottomBody}>Copyrighted © Numera</Text>
       </View>
     </View>
   );
